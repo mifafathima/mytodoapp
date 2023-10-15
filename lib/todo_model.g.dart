@@ -17,7 +17,7 @@ class TodoModelAdapter extends TypeAdapter<TodoModel> {
       for (int i = 0; i < numOfFields; i++) reader.readByte(): reader.read(),
     };
     return TodoModel(
-      Description: fields[0] as String,
+      description: fields[0] as String,
       isDone: fields[1] as bool,
     );
   }
@@ -27,7 +27,7 @@ class TodoModelAdapter extends TypeAdapter<TodoModel> {
     writer
       ..writeByte(2)
       ..writeByte(0)
-      ..write(obj.Description)
+      ..write(obj.description)
       ..writeByte(1)
       ..write(obj.isDone);
   }

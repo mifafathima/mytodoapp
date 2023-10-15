@@ -37,10 +37,10 @@ class TodoListTile extends StatelessWidget {
   Widget build(BuildContext context) {
     return Card(
       elevation: 3,
-      margin: EdgeInsets.symmetric(vertical: 8, horizontal: 16),
+      margin: const EdgeInsets.symmetric(vertical: 8, horizontal: 16),
       child: ListTile(
         //tileColor: Colors.red.shade400,
-        title: Text(todo.Description,
+        title: Text(todo.description,
           style: TextStyle(decoration: todo.isDone
               ? TextDecoration.lineThrough
               : TextDecoration.none,
@@ -66,7 +66,7 @@ class TodoListTile extends StatelessWidget {
         ),
         onTap: () {
           final newTodo = TodoModel(
-            Description: todo.Description,
+            description: todo.description,
             isDone: !todo.isDone,
           );
           Hive.box<TodoModel>('todos').putAt(index, newTodo);

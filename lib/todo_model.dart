@@ -5,11 +5,11 @@ part 'todo_model.g.dart';
 @HiveType(typeId: 0)
 class  TodoModel{
   @HiveField(0)
-  String Description;
+  String description;
 
   @HiveField(1)
   bool isDone;
 
-  TodoModel({required this.Description,  this.isDone = false});
+  TodoModel({required this.description,  this.isDone = false});
 
 }

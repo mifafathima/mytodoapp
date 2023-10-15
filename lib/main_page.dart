@@ -63,11 +63,18 @@ class _MainPageState extends State<MainPage> {
                   });
             } else {
               return  Center(
-                child: Text(
-                    "Press the \"+\" button at the bottom right to add todo.",style: GoogleFonts.cormorantGaramond(
-                  fontSize: 23,
-                  color:  Colors.black,
-                )),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text("No ToDos",style: GoogleFonts.oswald(fontSize: 30),),
+                    const SizedBox(height: 30,),
+                    Text(
+                        "Press the \"+\" button at the bottom right to add todo.",style: GoogleFonts.cormorantGaramond(
+                      fontSize: 17,
+                      color:  Colors.black,
+                    )),
+                  ],
+                ),
               );
             }
           }),
@@ -78,7 +85,7 @@ class _MainPageState extends State<MainPage> {
   }
 
   void _addTodo(String description) {
-    final todo = TodoModel(Description: description);
+    final todo = TodoModel(description: description);
     _todoBox.add(todo);
   }
 

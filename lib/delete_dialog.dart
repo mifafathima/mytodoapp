@@ -15,10 +15,10 @@ class DeleteConfirmationDialog extends StatelessWidget {
   Widget build(BuildContext context) {
     return AlertDialog(
       title: Text("Confirm Deletion",style: GoogleFonts.cormorantGaramond(fontSize: 30,color: Colors.red,fontWeight: FontWeight.bold),),
-      content: Text("Are you sure you want to delete this task??"),
+      content: const Text("Are you sure you want to delete this task??"),
       actions: [
-        TextButton(onPressed: onCancel, child: Text("Cancel",style: TextStyle(color: Colors.black),)),
-        TextButton(onPressed: onDelete, child: Text("Delete",style: TextStyle(color: Colors.red),)
+        TextButton(onPressed: onCancel, child: const Text("Cancel",style: TextStyle(color: Colors.black),)),
+        TextButton(onPressed: onDelete, child: const Text("Delete",style: TextStyle(color: Colors.red),)
         )
       ],
     );
